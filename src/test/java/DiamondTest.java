@@ -28,8 +28,31 @@ public class DiamondTest {
     public void drawIsoscelesTriangleFirstLine() throws Exception {
         Diamond diamond = new Diamond();
         diamond.drawIsoscelesTriangle(3);
+        assertThat(outContent.toString(), containsString("*\n" ));
+    }
+
+    @Test
+    public void drawIsoscelesTriangleSecondLine() throws Exception {
+        Diamond diamond = new Diamond();
+        diamond.drawIsoscelesTriangle(3);
+        assertThat(outContent.toString(), containsString("***\n" ));
+    }
+
+    @Test
+    public void drawIsoscelesTriangleThirdLine() throws Exception {
+        Diamond diamond = new Diamond();
+        diamond.drawIsoscelesTriangle(3);
+        assertThat(outContent.toString(), containsString("*****" ));
+    }
+
+    @Test
+    public void drawIsoscelesTriangleFirstLineWithSpaces() throws Exception {
+        Diamond diamond = new Diamond();
+        diamond.drawIsoscelesTriangle(3);
         assertThat(outContent.toString(), containsString("  *  " ));
     }
+
+
 /*
 
     @Test
