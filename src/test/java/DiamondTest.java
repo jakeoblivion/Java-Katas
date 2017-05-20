@@ -49,18 +49,14 @@ public class DiamondTest {
     public void drawIsoscelesTriangleFirstLineWithSpaces() throws Exception {
         Diamond diamond = new Diamond();
         diamond.drawIsoscelesTriangle(3);
-        assertThat(outContent.toString(), containsString("  *  " ));
+        assertThat(outContent.toString(), containsString("  *" ));
     }
-
-
-/*
 
     @Test
     public void drawIsoscelesTriangle() throws Exception {
         Diamond diamond = new Diamond();
         diamond.drawIsoscelesTriangle(3);
-        assertEquals("  *  \n *** \n*****", outContent.toString());
+        assertEquals("  *\n ***\n*****", outContent.toString());
     }
-*/
 
 }
