@@ -1,6 +1,5 @@
 package FizzBuzz;
 
-import Diamond.Diamond;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -30,7 +29,7 @@ public class FizzBuzzTest {
         FizzBuzz fizzBuzz = new FizzBuzz();
         fizzBuzz.FizzBuzz(3);
 
-        assertThat(outContent.toString(), containsString("1\n2\nFizz" ));
+        assertThat(outContent.toString(), containsString("1\n2\nFizz"));
     }
 
     @Test
@@ -38,6 +37,14 @@ public class FizzBuzzTest {
         FizzBuzz fizzBuzz = new FizzBuzz();
         fizzBuzz.FizzBuzz(6);
 
-        assertThat(outContent.toString(), containsString("1\n2\nFizz\n4\n5\nBuzz" ));
+        assertThat(outContent.toString(), containsString("1\n2\nFizz\n4\nBuzz\nFizz"));
+    }
+
+    @Test
+    public void printFizzBuzz() throws Exception {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        fizzBuzz.FizzBuzz(15);
+
+        assertThat(outContent.toString(), containsString("1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz"));
     }
 }

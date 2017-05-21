@@ -1,6 +1,5 @@
 package PrimeFactors;
 
-import PrimeFactors.PrimeFactors;
 import org.junit.Test;
 
 import java.util.ArrayList;
