@@ -5,9 +5,7 @@ import org.junit.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import static com.sun.jmx.snmp.ThreadContext.contains;
 import static org.hamcrest.CoreMatchers.containsString;
-import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 public class DiamondTest {
@@ -59,4 +57,34 @@ public class DiamondTest {
         assertEquals("  *\n ***\n*****", outContent.toString());
     }
 
+    @Test
+    public void drawDiamond() throws Exception {
+        Diamond diamond = new Diamond();
+        diamond.drawDiamond(3);
+        assertEquals("  *\n ***\n*****\n ***\n  *", outContent.toString());
+        System.out.print(outContent);
+    }
+
+    @Test
+    public void drawLargeDiamond() throws Exception {
+        Diamond diamond = new Diamond();
+        diamond.drawDiamond(5);
+        assertEquals("    *\n   ***\n  *****\n *******\n*********\n *******\n  *****\n   ***\n    *", outContent.toString());
+    }
+
+    @Test
+    public void drawDiamondWithName() throws Exception {
+        Diamond diamond = new Diamond();
+        diamond.drawDiamondWithName(3);
+        assertEquals("  *\n ***\nJAKE\n ***\n  *", outContent.toString());
+        System.out.print(outContent);
+    }
+
+
+    @Test
+    public void drawLargeDiamondWithName() throws Exception {
+        Diamond diamond = new Diamond();
+        diamond.drawDiamondWithName(5);
+        assertEquals("    *\n   ***\n  *****\n *******\nJAKE\n *******\n  *****\n   ***\n    *", outContent.toString());
+    }
 }

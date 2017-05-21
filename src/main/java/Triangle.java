@@ -1,12 +1,11 @@
 public class Triangle {
 
-    public void drawAsterisk() {
-        System.out.print('*');
-    }
-
-    public void drawHorizontalLine(int numberOfAsterisks) {
-        for(int x = 0; x < numberOfAsterisks; x++) {
-            drawAsterisk();
+    public void drawRightTriangle(int numberOfLines) {
+        for(int x = 1; x < numberOfLines + 1; x++) {
+            drawHorizontalLine(x);
+            if(x < numberOfLines) {
+                System.out.println();
+            }
         }
     }
 
@@ -19,12 +18,14 @@ public class Triangle {
         }
     }
 
-    public void drawRightTriangle(int numberOfLines) {
-        for(int x = 1; x < numberOfLines + 1; x++) {
-            drawHorizontalLine(x);
-            if(x < numberOfLines) {
-                System.out.println();
-            }
+    public void drawHorizontalLine(int numberOfAsterisks) {
+        for(int x = 0; x < numberOfAsterisks; x++) {
+            drawAsterisk();
         }
     }
+
+    public void drawAsterisk() {
+        System.out.print('*');
+    }
+
 }
