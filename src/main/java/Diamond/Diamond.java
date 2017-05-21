@@ -1,6 +1,15 @@
 package Diamond;
 
 public class Diamond {
+    public static void main(String[] args) {
+        Diamond diamond = new Diamond();
+        System.out.println();
+        diamond.drawIsoscelesTriangle(3);
+        System.out.println();
+        diamond.drawDiamond(3);
+        System.out.println();
+        diamond.drawDiamondWithName(3);
+    }
 
     public void drawDiamondWithName(int diamondHeight) {
         drawIsoscelesTriangleWithName(diamondHeight);

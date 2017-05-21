@@ -1,3 +1,8 @@
+#Build Instructions
+Requirements: Gradle
+
+    gradle build
+
 #Assignment: Introductory programming exercises
 ##Triangle Exercises
 Easiest exercise ever

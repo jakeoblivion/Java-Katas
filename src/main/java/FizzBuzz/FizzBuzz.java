@@ -1,6 +1,11 @@
 package FizzBuzz;
 
 public class FizzBuzz {
+    public static void main(String[] args) {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        fizzBuzz.FizzBuzz(100);
+    }
+
     private final int FIZZ = 3;
     private final int BUZZ = 5;
 

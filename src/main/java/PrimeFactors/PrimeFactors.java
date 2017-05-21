@@ -4,27 +4,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PrimeFactors {
+    public static void main(String[] args) {
+        PrimeFactors primeFactors = new PrimeFactors();
+        System.out.println(primeFactors.generatePrimeFactors(30));
+    }
+
     List<Integer> primeFactors = new ArrayList<>();
 
     public List<Integer> generatePrimeFactors(int n) {
-        if(n>1) {
-            addPrimes(n);
+        for(int possiblePrime = 2; n > 1; possiblePrime++){
+            while(n % possiblePrime == 0) {
+                addUniquePrimesToList(possiblePrime);
+                n /= possiblePrime;
+            }
         }
         return primeFactors;
     }
 
-    private void addPrimes(int n) {
-        for(int i = 2;i <= n; i++) {
-            while(n % i == 0) {
-                addUniquePrimesToList(i);
-                n /= i;
-            }
-        }
-    }
-
-    private void addUniquePrimesToList(int i) {
-        if(!primeFactors.contains(i)) {
-            primeFactors.add(i);
+    private void addUniquePrimesToList(int possiblePrime) {
+        if(!primeFactors.contains(possiblePrime)) {
+            primeFactors.add(possiblePrime);
         }
     }
 }
