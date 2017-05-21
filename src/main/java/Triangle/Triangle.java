@@ -1,3 +1,5 @@
+package Triangle;
+
 public class Triangle {
 
     public void drawRightTriangle(int numberOfLines) {

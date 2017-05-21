@@ -4,7 +4,8 @@ Easiest exercise ever
 
 Print one asterisk to the console.
 Example:
-*
+
+    *
 
 ####Draw a horizontal line
 

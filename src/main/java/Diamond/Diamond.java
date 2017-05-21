@@ -1,3 +1,5 @@
+package Diamond;
+
 public class Diamond {
 
     public void drawDiamondWithName(int diamondHeight) {

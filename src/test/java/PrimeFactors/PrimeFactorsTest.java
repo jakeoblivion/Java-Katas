@@ -1,3 +1,6 @@
+package PrimeFactors;
+
+import PrimeFactors.PrimeFactors;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -27,16 +30,6 @@ public class PrimeFactorsTest {
     }
 
     @Test
-    public void generatePrimeFactorsReturn2From4() throws Exception {
-        PrimeFactors primeFactors = new PrimeFactors();
-        List<Integer> primes = primeFactors.generatePrimeFactors(4);
-        List<Integer> expectedList = new ArrayList<>();
-        Collections.addAll(expectedList, 2);
-
-        assertEquals(expectedList,primes);
-    }
-
-    @Test
     public void generatePrimeFactorsReturn25From10() throws Exception {
         PrimeFactors primeFactors = new PrimeFactors();
         List<Integer> primes = primeFactors.generatePrimeFactors(10);
@@ -57,11 +50,21 @@ public class PrimeFactorsTest {
     }
 
     @Test
-    public void generatePrimeFactorsReturn25From27() throws Exception {
+    public void generatePrimeFactorsReturn211From22() throws Exception {
         PrimeFactors primeFactors = new PrimeFactors();
-        List<Integer> primes = primeFactors.generatePrimeFactors(20);
+        List<Integer> primes = primeFactors.generatePrimeFactors(22);
         List<Integer> expectedList = new ArrayList<>();
-        Collections.addAll(expectedList, 2,5);
+        Collections.addAll(expectedList, 2,11);
+
+        assertEquals(expectedList,primes);
+    }
+
+    @Test
+    public void generatePrimeFactorsReturn3From27() throws Exception {
+        PrimeFactors primeFactors = new PrimeFactors();
+        List<Integer> primes = primeFactors.generatePrimeFactors(27);
+        List<Integer> expectedList = new ArrayList<>();
+        Collections.addAll(expectedList, 3);
 
         assertEquals(expectedList,primes);
     }
@@ -72,25 +75,6 @@ public class PrimeFactorsTest {
         List<Integer> primes = primeFactors.generatePrimeFactors(30);
         List<Integer> expectedList = new ArrayList<>();
         Collections.addAll(expectedList, 2,3,5);
-
-        assertEquals(expectedList,primes);
-    }
-
-    @Test
-    public void generatePrimeFactorsReturn211From22() throws Exception {
-        PrimeFactors primeFactors = new PrimeFactors();
-        List<Integer> primes = primeFactors.generatePrimeFactors(22);
-        List<Integer> expectedList = new ArrayList<>();
-        Collections.addAll(expectedList, 2,11);
-
-        assertEquals(expectedList,primes);
-    }
-
-    public void generatePrimeFactorsReturn11From121() throws Exception {
-        PrimeFactors primeFactors = new PrimeFactors();
-        List<Integer> primes = primeFactors.generatePrimeFactors(11);
-        List<Integer> expectedList = new ArrayList<>();
-        Collections.addAll(expectedList, 11);
 
         assertEquals(expectedList,primes);
     }
